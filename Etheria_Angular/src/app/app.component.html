@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>
+    <button mat-flat-button routerLink="/"><img src="../assets/images/logo.png"></button>
+  </div>
+  <div>
+    <button mat-flat-button>Posts</button>
+    <button mat-flat-button routerLink="/anime" routerLinkActive="active">Anime</button>
+    <button mat-flat-button>Manga</button>
+    <button mat-flat-button>Games</button>
+    <button mat-flat-button routerLink="/contact" routerLinkActive="active">Contact</button>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<mat-grid-list class="footer1" cols="2" rowHeight="75px">
+  <mat-grid-tile>
+    <h1>Footer Content</h1>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h1>Links</h1>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list class="footer1" cols="2" rowHeight="115px">
+  <mat-grid-tile>
+    <span>Example Content</span>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <span>Example Links</span>  
+  </mat-grid-tile>
+</mat-grid-list>  
+<mat-grid-list class="footer2" cols="1" rowHeight="70px">
+  <mat-grid-tile>
+    <h1>Piia</h1>
+  </mat-grid-tile>
+</mat-grid-list>

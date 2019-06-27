@@ -1,0 +1,42 @@
+/* Navbar */
+.navbar {
+    justify-content: space-between;
+    background-color: #ffb3ba;
+    height: 100px;
+}
+
+.navbar button {
+    padding-right: 1rem;
+    background-color: #ffb3ba;
+    color: white;
+    font-size: 27.5px;
+}
+
+.navbar img {
+    height: 90px;
+    width: auto;
+}
+
+.navbar .active {
+    padding-right: 1rem;
+    background-color: #f86f7c;
+    color: white;
+    font-size: 27.5px;
+}
+
+/* Footer */
+.footer1 {
+    background-color: #ffb3ba;
+    color: white;
+    font-size: 23px;
+}
+
+.footer1 span {
+    font-size: 26px;
+}
+
+.footer2 {
+    background-color: #f86f7c;
+    color: white;
+    font-size: 18px;
+}
