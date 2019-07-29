@@ -1,0 +1,20 @@
+<div class="category">
+  <div class="posts-list">
+    <button mat-flat-button routerLink="/anime">Anime Reviews</button>
+  </div>
+  <div class="posts-list">
+    <button mat-flat-button routerLink="/games">Game Reviews</button>
+  </div>
+</div>
+<table class="entry">
+  <a>
+  <tr class="posts-list" (click)="onSelect(post)" *ngFor="let post of posts">
+    <td>
+      <img [src]="post.thumbnail">
+    </td>
+    <td>
+      <span>{{post.title}}</span>
+    </td>
+  </tr>
+  </a>
+</table>

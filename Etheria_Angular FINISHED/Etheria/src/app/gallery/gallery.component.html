@@ -1,0 +1,42 @@
+<div class="header">
+  <span>Photo Gallery</span>
+</div>
+
+<div class="updatebutton" *ngIf="_authService.loggedAdmin()">
+  <button mat-flat-button *ngIf="hideForm" (click)="newImages()">New Images</button>
+</div>
+<div class="returnbutton" *ngIf="!hideForm" (click)="returnGallery()">
+  <button mat-flat-button>Return to the Gallery</button>
+</div>
+
+<div class="updateform" *ngIf="!hideForm">
+  <form #form="ngForm" (ngSubmit)="onSubmitAddImages(form.value)" class="well">
+    <div class="form-group">
+      <label>First Image</label>
+      <input type="text" class="form-control" required name="columnOne" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Second Image</label>
+      <input type="text" class="form-control" required name="columnTwo" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Third Image</label>
+      <input type="text" class="form-control" required name="columnThree" ngModel>
+    </div>
+    <button type="submit" class="btn">Save</button>
+  </form>
+</div>
+
+<table *ngIf="hideForm">
+  <tr *ngFor="let image of images">
+    <td>
+      <a [href]="image.columnOne" target="_blank"><img [src]="image.columnOne"></a>
+    </td>
+    <td>
+      <a [href]="image.columnTwo" target="_blank"><img [src]="image.columnTwo"></a>
+    </td>
+    <td>
+      <a [href]="image.columnThree" target="_blank"><img [src]="image.columnThree"></a>
+    </td>
+  </tr>
+</table>

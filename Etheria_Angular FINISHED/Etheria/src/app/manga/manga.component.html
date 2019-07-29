@@ -1,0 +1,14 @@
+<div class="header">
+  <span class="mat-display-3">Manga Reviews</span>
+</div>
+
+<table *ngFor="let mangaReview of mangaReviews">
+  <tr>
+    <td width="20%">
+      <img [src]="mangaReview.src" [alt]="mangaReview.alt">
+    </td>
+    <td width="80%">
+      <span class="mat-display-2">{{mangaReview.title}}</span>
+    </td>
+  </tr>
+</table>

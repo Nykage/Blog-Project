@@ -1,0 +1,36 @@
+.category .posts-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category .posts-list button {
+    background-color: #ffb3ba;
+    font-size: 26px;
+    font-family: piianew, "piianew", sans-serif;
+    margin-bottom: 1rem; 
+}
+
+.category {
+    margin-bottom: 1rem;
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.entry .posts-list {
+    font-size: 26px;
+    font-family: piianew, "piianew", sans-serif;
+    margin-bottom: 0.5rem; 
+}
+
+.entry .posts-list img {
+    height: 120px;
+    width: auto;
+    margin-right: 1rem;
+}

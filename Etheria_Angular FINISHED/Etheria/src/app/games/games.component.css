@@ -1,0 +1,52 @@
+.updatebutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.updatebutton button {
+    background-color: #ffff9c;
+    font-size: 26px;
+    font-family: piianew, "piianew", sans-serif;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    border-color: #ffb3ba;
+    border-width: 5px;
+    border-style: solid;
+    color: #f86f7c;
+}
+
+.updateform {
+    font-size: 28px;
+    margin-bottom: 4rem;
+}
+
+.updateform button {
+    font-size: 28px;
+    background-color: #ffb3ba;
+}
+
+.updateform input {
+    font-size: 28px;
+}
+
+.header {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #ffff9c;
+    border-radius: 15px;
+    border-color: #ffb3ba;
+    border-width: 10px;
+    border-style: solid;
+    color: black;
+    padding: 15px 0px 15px 0px;
+    margin-right: 450px;
+    margin-left: 450px;
+    font-size: 70px;
+    color: #f86f7c;
+}
+
+.container {
+    font-size: 26px;
+}

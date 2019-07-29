@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="title">
+    <b><span>{{review.title}}</span></b>
+  </div>
+  <div class="user">
+    <span>Posted by: <b>{{review.user}}</b></span>
+  </div>
+  <hr class="firsthr">
+  <div class="review-text" [innerHTML]="review.reviewText">
+  </div>
+  <hr>
+  <div class="rating">
+    <img [src]="review.rating">
+  </div>
+</div>

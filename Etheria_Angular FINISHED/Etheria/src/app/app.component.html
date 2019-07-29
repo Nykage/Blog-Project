@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>
+    <button mat-flat-button routerLink="/"><img src="../assets/images/logo.png"></button>
+    <button mat-flat-button routerLink="/blog" routerLinkActive="active">Blog</button>
+    <button mat-flat-button routerLink="/gallery" routerLinkActive="active">Images</button>
+    <button mat-flat-button routerLink="/videogallery" routerLinkActive="active">Videos</button>
+    <button mat-flat-button routerLink="/contact" routerLinkActive="active">Contact</button>
+  </div>
+  <div>
+    <button mat-flat-button *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</button>
+    <button mat-flat-button *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Login</button>
+    <button mat-flat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</button>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<!-- <mat-grid-list class="footer1" cols="2" rowHeight="75px">
+  <mat-grid-tile>
+    <h1>Footer Content</h1>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h1>Links</h1>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list class="footer1" cols="2" rowHeight="115px">
+  <mat-grid-tile>
+    <span>Example Content</span>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <span>Example Links</span>  
+  </mat-grid-tile>
+</mat-grid-list> -->
+<mat-grid-list class="footer2" cols="1" rowHeight="70px">
+  <mat-grid-tile>
+    <span>Piia</span>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,84 @@
+.header {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #ffff9c;
+    border-radius: 15px;
+    border-color: #ffb3ba;
+    border-width: 10px;
+    border-style: solid;
+    color: black;
+    padding: 15px 0px 15px 0px;
+    margin-right: 450px;
+    margin-left: 450px;
+    font-size: 70px;
+    color: #f86f7c;
+}
+
+.updatebutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.updatebutton button {
+    background-color: #ffff9c;
+    font-size: 40px;
+    font-family: piianew, "piianew", sans-serif;
+    max-width: 50%;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    border-color: #ffb3ba;
+    border-width: 5px;
+    border-style: solid;
+    color: #f86f7c;
+}
+
+.returnbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem; 
+}
+
+.returnbutton button {
+    color: #75aeda;
+    font-size: 28px;
+    font-family: piianew, "piianew", sans-serif;
+    max-width: 50%;
+}
+
+.updateform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem; 
+}
+
+.updateform {
+    font-size: 28px;
+}
+
+.updateform button {
+    font-size: 28px;
+    background-color: #ffb3ba;
+}
+
+input {
+    font-size: 28px;
+}
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4rem;
+    background-color: #ffb3ba;
+    border-radius: 15px;
+}
+
+table tr td img {
+    height: auto;
+    width: 420px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+}

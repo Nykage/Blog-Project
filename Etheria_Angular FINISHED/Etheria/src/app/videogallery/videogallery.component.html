@@ -1,0 +1,54 @@
+<div class="header">
+  <span>Video Gallery</span>
+</div>
+
+<div class="updatebutton" *ngIf="_authService.loggedAdmin()">
+  <button mat-flat-button *ngIf="hideForm" (click)="newVideos()">New Videos</button>
+</div>
+<div class="returnbutton" *ngIf="!hideForm" (click)="returnVideoGallery()">
+  <button mat-flat-button>Return to the Gallery</button>
+</div>
+
+<div class="updateform" *ngIf="!hideForm">
+  <form #form="ngForm" (ngSubmit)="onSubmitAddVideos(form.value)" class="well">
+    <div class="form-group">
+      <label>First Video Preview Picture</label>
+      <input type="text" class="form-control" required name="columnOnePreview" ngModel>
+    </div>
+    <div class="form-group">
+      <label>First Video</label>
+      <input type="text" class="form-control" required name="columnOneVideo" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Second Video Preview Picture</label>
+      <input type="text" class="form-control" required name="columnTwoPreview" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Second Video</label>
+      <input type="text" class="form-control" required name="columnTwoVideo" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Third Video Preview Picture</label>
+      <input type="text" class="form-control" required name="columnThreePreview" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Third Video</label>
+      <input type="text" class="form-control" required name="columnThreeVideo" ngModel>
+    </div>
+    <button type="submit" class="btn">Save</button>
+  </form>
+</div>
+
+<table *ngIf="hideForm">
+  <tr *ngFor="let video of videos">
+    <td>
+      <a [href]="video.columnOneVideo" target="_blank"><img [src]="video.columnOnePreview"></a>
+    </td>
+    <td>
+      <a [href]="video.columnTwoVideo" target="_blank"><img [src]="video.columnTwoPreview"></a>
+    </td>
+    <td>
+      <a [href]="video.columnThreeVideo" target="_blank"><img [src]="video.columnThreePreview"></a>
+    </td>
+  </tr>
+</table>

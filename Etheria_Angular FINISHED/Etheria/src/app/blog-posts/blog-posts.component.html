@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="title">
+    <b><span>{{post.title}}</span></b>
+  </div>
+  <div class="user">
+    <span>Posted by: <b>{{post.user}}</b></span>
+  </div>
+  <div class="date">
+    <span>Date: <b>{{post.date}}</b></span>
+  </div>
+  <hr>
+  <div class="post-text" [innerHTML]="post.postText">
+  </div>
+  <hr>
+</div>

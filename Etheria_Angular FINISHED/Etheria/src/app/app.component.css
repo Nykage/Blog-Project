@@ -1,0 +1,48 @@
+/* Navbar */
+.navbar {
+    justify-content: space-between;
+    background-color: #ffb3ba;
+    height: 100px;
+    font-family: piianew, "piianew", sans-serif;
+}
+
+.navbar button {
+    padding-right: 1rem;
+    background-color: #ffb3ba;
+    color: white;
+    font-size: 46px;
+    font-family: piianew, "piianew", sans-serif;
+}
+
+.navbar img {
+    height: 90px;
+    width: auto;
+}
+
+.navbar .active {
+    padding-right: 1rem;
+    background-color: #f86f7c;
+    color: white;
+    font-size: 46px;
+    font-family: piianew, "piianew", sans-serif;
+}
+
+/* Footer */
+.footer1 {
+    background-color: #ffb3ba;
+    color: white;
+    font-size: 23px;
+    font-family: piianew, "piianew", sans-serif;
+}
+
+.footer1 span {
+    font-size: 26px;
+    font-family: piianew, "piianew", sans-serif;
+}
+
+.footer2 {
+    background-color: #f86f7c;
+    color: white;
+    font-size: 50px;
+    font-family: piianew, "piianew", sans-serif;
+}

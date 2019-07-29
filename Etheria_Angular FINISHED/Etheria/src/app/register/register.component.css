@@ -1,0 +1,22 @@
+.formfontsize span {
+    font-size: 43px;
+}
+
+.formfontsize {
+    font-size: 28px;
+    color: #f86f7c;
+}
+
+.formfontsize button {
+    font-size: 28px;
+    background-color: #ffff9c;
+    color: #f86f7c;
+}
+
+.headercolor {
+    background-color: #ffff9c;
+}
+
+input {
+    font-size: 28px;
+}

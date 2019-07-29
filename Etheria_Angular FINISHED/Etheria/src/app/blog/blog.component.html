@@ -1,0 +1,43 @@
+<div class="header">
+  <span>Blog Posts</span>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="updateform" *ngIf="!hideForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitAddPost(form.value)" class="well">
+          <div class="form-group">
+            <label>Posted By</label>
+            <input type="text" class="form-control" required name="user" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="text" class="form-control" required name="date" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input type="text" class="form-control" required name="thumbnail" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" required name="title" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Text</label>
+            <input type="text" class="form-control" required name="postText" ngModel>
+          </div>
+          <button type="submit" class="btn">Save</button>
+        </form>
+      </div>
+      <blog-posts *ngIf="selectedPost && hideForm" [post]="selectedPost"></blog-posts>
+    </div>
+    <div class="col-4">
+      <div class="updatebutton" *ngIf="_authService.loggedAdmin()">
+        <button mat-flat-button *ngIf="hideForm" (click)="newPost()">New Post</button>
+        <button mat-flat-button *ngIf="!hideForm" (click)="returnPosts()">Return</button>
+      </div>
+      <blog-posts-list (SelectPost)="onSelectPost($event)" [posts]="posts"></blog-posts-list>
+    </div>
+  </div>
+</div>

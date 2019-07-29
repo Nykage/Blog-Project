@@ -1,0 +1,43 @@
+<div class="header">
+  <span>Anime Review</span>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="updateform" *ngIf="!hideForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitAddReview(form.value)" class="well">
+          <div class="form-group">
+            <label>Posted By</label>
+            <input type="text" class="form-control" required name="user" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input type="text" class="form-control" required name="thumbnail" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" required name="title" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Rating</label>
+            <input type="text" class="form-control" required name="rating" ngModel>
+          </div>
+          <div class="form-group">
+            <label>Text</label>
+            <input type="text" class="form-control" required name="reviewText" ngModel>
+          </div>
+          <button type="submit" class="btn">Save</button>
+        </form>
+      </div>
+      <anime-posts *ngIf="selectedReview && hideForm" [review]="selectedReview"></anime-posts>
+    </div>
+    <div class="col-4">
+      <div class="updatebutton" *ngIf="_authService.loggedAdmin()">
+        <button mat-flat-button *ngIf="hideForm" (click)="newReview()">New Review</button>
+        <button mat-flat-button *ngIf="!hideForm" (click)="returnReviews()">Return</button>
+      </div>
+      <anime-posts-list (SelectReview)="onSelectReview($event)" [reviews]="reviews"></anime-posts-list>
+    </div>
+  </div>
+</div>
